@@ -12,7 +12,8 @@ pipeline {
             steps {
                 sh "sudo pwd"
                 sh "cd ./Jenkins/scripts "
-                sh "sudo chmod +x test.sh" 
+                sh "sudo pwd"  
+                sh "sudo chmod a+x test.sh" 
                 sh "sudo pwd" 
                 sh "./test.sh "
                 

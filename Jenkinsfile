@@ -4,7 +4,7 @@ pipeline {
         stage("Build") {
             steps {
                 sh "sudo npm intall"
-                sh "sudo npm run build"
+                
             }
         }
         stage("Deploy") {

@@ -8,6 +8,11 @@ pipeline {
                 
             }
         }
+        stage('Test') {
+            steps {
+                sh './jenkins/scripts/test.sh'
+            }
+        }  
         stage("Deploy") {
             steps {
                 sh "sudo rm -rf /var/www/jenkins-react-app"

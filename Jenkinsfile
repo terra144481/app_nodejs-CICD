@@ -11,7 +11,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 sh "sudo rm -rf /var/www/jenkins-react-app"
-                sh "sudo scp -r ${WORKSPACE}/build/ ubuntu@34.236.156.170:/var/www/jenkins-react-app/"
+                sh "scp -r ${WORKSPACE}/build/ ubuntu@34.236.156.170:/var/www/jenkins-react-app/"
             }
         }
     }

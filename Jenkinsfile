@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh "sudo pwd" 
-                sh "./var/lib/jenkins/workspace/jenkins-node-app/Jenkins/scripts/test.sh "
+                sh "./Jenkins/scripts/test.sh "
                 
             }
         }

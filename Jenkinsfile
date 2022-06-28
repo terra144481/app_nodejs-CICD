@@ -10,7 +10,9 @@ pipeline {
           
         stage('Test') {
             steps {
-                sh "sudo ./Jenkins/scripts/test.sh"
+                sh "sudo pwd"
+                sh "whoami" 
+                sh "./Jenkins/scripts/test.sh"
             }
         }
           

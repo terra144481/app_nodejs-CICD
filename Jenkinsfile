@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh "sudo pwd"
                 sh "whoami" 
-                sh "/var/lib/jenkins/workspace/Jenkins/scripts/test.sh"
+                sh "/var/lib/jenkins/workspace/jenkins-node-app/workspace/Jenkins/scripts/test.sh"
             }
         }
           

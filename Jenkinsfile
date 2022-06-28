@@ -4,15 +4,16 @@ pipeline {
         stage("Build") {
             steps {
                 sh "sudo npm install"
-                sh "sudo npm run build"
-                
+                sh "sudo npm run build"               
             }
         }
+          
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
             }
-        }  
+        }
+          
         stage("Deploy") {
             steps {
                 sh "sudo rm -rf /var/www/jenkins-react-app"

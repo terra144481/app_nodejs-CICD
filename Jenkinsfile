@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh "sudo pwd" 
-                sh "./Jenkins/scripts/test.sh "
+                sh "sudo ./Jenkins/scripts/test.sh "
                 
             }
         }

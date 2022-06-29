@@ -10,7 +10,6 @@ pipeline {
           
         stage('Test') {
             steps {
-                sh "sudo pwd" 
                 sh "sudo chmod a+x ./Jenkins/scripts/test.sh"
                 sh "./Jenkins/scripts/test.sh "
                 

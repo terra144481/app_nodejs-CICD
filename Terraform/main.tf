@@ -10,20 +10,20 @@ terraform {
 #copy *.tfstate to aws s3  
   backend "s3" {
     bucket = "ivan-lovkin-terraform-state"
-    key    = "dev/terraform.tfstate"
+    key    = "nodejs/terraform.tfstate"
     region = "eu-central-1"
  }    
 }
 
 provider "aws" {
   profile = "default"
-  region  = "eu-central-1"
+  region  = "us-east-1"
 }
 
 resource "aws_instance" "develop" {
-  ami                    = "ami-02584c1c9d05efa69" # ubuntu 20.04
+  ami                    = "ami-08d4ac5b634553e16" # ubuntu 20.04
   instance_type          = "t2.micro"
-  key_name               = "docker_key"
+  key_name               = "testpc"
   vpc_security_group_ids = [aws_security_group.dev_server.id]
 
   tags = {
@@ -58,10 +58,10 @@ resource "aws_security_group" "dev_server" {
 }
 
 resource "aws_instance" "product" {
-  ami                    = "ami-02584c1c9d05efa69" # ubuntu 20.04
+  ami                    = "ami-08d4ac5b634553e16" # ubuntu 20.04
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.prod_server.id]
-  key_name               = "docker_key"	
+  key_name               = "testpc"	
 
   tags = {
     Name    = "Production server"
@@ -74,7 +74,7 @@ resource "aws_security_group" "prod_server" {
   name        = "Product server security group"
   description = "This is product server security group"
   dynamic "ingress" {
-    for_each = ["80", "443"]
+    for_each = ["80", "443", "3000"]
     content {
       from_port   = ingress.value
       to_port     = ingress.value

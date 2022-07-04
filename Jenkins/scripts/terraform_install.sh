@@ -9,7 +9,5 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o -i "awscliv2.
 unzip awscliv2.zip
 sudo ./aws/install
 aws --version
-<<<<<<< HEAD
 pwd
-=======
->>>>>>> 42bfb36d3e721c2a26c696a69d6974a9e7555cea
+

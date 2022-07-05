@@ -7,3 +7,24 @@
 
   - name: Ping production server
     ping:
+
+  - name: Installs nginx web server
+    apt: pkg=nginx state=installed update_cache=true
+    notify:
+        - start nginx
+
+  - name: add apt key for nodesource
+    apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+  - name: add repo for nodesource
+    apt_repository:
+      repo: 'deb https://deb.nodesource.com/node_0.14 {{ ansible_distribution_release }} main'
+      update_cache: yes
+
+  - name: install nodejs
+    apt: name=nodejs
+
+  - name: install NPM
+    shell: npm i
+      args:
+      chdir: /home/ubuntu

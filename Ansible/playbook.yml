@@ -18,7 +18,6 @@
 
   - name: "Install nodejs"
     apt:
-      update_cache: yes
       name: nodejs
       state: present
 
@@ -26,7 +25,7 @@
     shell: npm i
     args:
       chdir: /home/ubuntu
-      
+
   - name: Update apt cache and install Nginx
     apt:
       name: nginx

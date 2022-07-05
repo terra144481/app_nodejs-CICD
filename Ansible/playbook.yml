@@ -16,13 +16,17 @@
         repo: "deb https://deb.nodesource.com/node_14.x focal main"
         update_cache: yes
 
-  - name: install nodejs
-    apt: name=nodejs
+  - name: "Install nodejs"
+    apt:
+      update_cache: yes
+      name: nodejs
+      state: present
 
   - name: install NPM
     shell: npm i
     args:
       chdir: /home/ubuntu
+      
   - name: Update apt cache and install Nginx
     apt:
       name: nginx

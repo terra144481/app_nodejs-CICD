@@ -2,7 +2,7 @@
 ubuntu ansible_host=35.174.15.1 
 
 [prod]
-ubuntu ansible_host=54.160.225.185 
+ubuntu ansible_host=54.226.153.126 
 
 [serv:children]
 dev

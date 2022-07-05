@@ -9,7 +9,7 @@ terraform {
 
 #copy *.tfstate to aws s3  
   backend "s3" {
-    bucket = "ivan-lovkin-terraform-state"
+    bucket = "nodejs-terraform1984"
     key    = "nodejs/terraform.tfstate"
     region = "us-east-1"
  }    

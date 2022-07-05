@@ -19,8 +19,9 @@
 
   - name: add repo for nodesource
     apt_repository:
-      repo: 'deb https://deb.nodesource.com/node_0.14 {{ ansible_distribution_release }} main'
-      update_cache: yes
+        repo: "deb https://deb.nodesource.com/setup_14.x main"
+        state: present
+        update_cache: yes
 
   - name: install nodejs
     apt: name=nodejs

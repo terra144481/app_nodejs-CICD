@@ -1,0 +1,9 @@
+---
+- name: Configure production server
+  hosts: prod
+  become: yes
+
+  tasks:
+
+  - name: Ping production server
+    ping:

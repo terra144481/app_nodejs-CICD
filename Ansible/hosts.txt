@@ -1,0 +1,13 @@
+[dev]
+ubuntu ansible_host=35.174.15.1 
+
+[prod]
+ubuntu ansible_host=54.160.225.185 
+
+[serv:children]
+dev
+prod
+
+[serv:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key=/home/ubuntu/.ssh/testpc.pem

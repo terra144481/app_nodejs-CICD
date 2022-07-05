@@ -11,6 +11,6 @@
    - name: Clone a github repository
      git:
        repo: 'https://github.com/terra144481/app_nodejs.git'
-       dest: /home/ubuntu/git/
+       dest: /home/ubuntu/
        clone: yes
        update: yes

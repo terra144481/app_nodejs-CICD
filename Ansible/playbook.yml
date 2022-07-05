@@ -19,7 +19,7 @@
 
   - name: add repo for nodesource
     apt_repository:
-        repo: "deb https://deb.nodesource.com/setup_14.x main"
+        repo: "deb https://deb.nodesource.com/node_14.x main"
         state: present
         update_cache: yes
 

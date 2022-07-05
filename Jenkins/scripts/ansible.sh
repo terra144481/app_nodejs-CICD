@@ -1,6 +1,5 @@
 #!/bin/bash
 sudo apt-get update
-pwd
-sudo apt install -i python3-pip
-sudo pip install -i ansible
+sudo apt -i install  python3-pip
+sudo pip install ansible
 ansible --version

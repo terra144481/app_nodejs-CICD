@@ -11,7 +11,7 @@ terraform {
   backend "s3" {
     bucket = "ivan-lovkin-terraform-state"
     key    = "nodejs/terraform.tfstate"
-    region = "us-east-1"
+    region = "eu-central-1"
  }    
 }
 

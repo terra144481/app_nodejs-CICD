@@ -26,5 +26,5 @@
 
   - name: install NPM
     shell: npm i
-      args:
+    args:
       chdir: /home/ubuntu

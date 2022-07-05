@@ -9,10 +9,10 @@
     ping:
 
   - name: Update apt cache and install Nginx
-      apt:
-        name: nginx
-        state: latest
-        update_cache: yes
+    apt:
+      name: nginx
+      state: latest
+      update_cache: yes
 
   - name: add apt key for nodesource
     apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key

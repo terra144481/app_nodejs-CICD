@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Create infrastructure using Terraform') {
             steps {
-                git branch: '**', credentialsId: 'jenkins-github', url: 'git@github.com:terra144481/app_nodejs.git'
+                
                 sh "sudo chmod a+x ./Jenkins/scripts/terraform_install.sh"
                 sh "./Jenkins/scripts/terraform_install.sh "
                 sh "sudo chmod a+x ./Jenkins/scripts/terraform_aws.sh"

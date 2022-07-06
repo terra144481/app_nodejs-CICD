@@ -16,7 +16,7 @@ pipeline {
        
         stage('Configure dev and prod env using Ansible') {
             steps {
-                
+                sh "sudo chmod a+x ansible_playbooks.sh"
                 sh "./Jenkins/scripts/ansible_playbooks.sh"
             }
         }

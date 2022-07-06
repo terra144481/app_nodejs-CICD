@@ -5,7 +5,6 @@ pipeline {
     stages {
         stage('Create infrastructure using Terraform') {
             steps {
-                
                 sh "sudo chmod a+x ./Jenkins/scripts/terraform_install.sh"
                 sh "./Jenkins/scripts/terraform_install.sh "
                 sh "sudo chmod a+x ./Jenkins/scripts/terraform_aws.sh"
@@ -18,9 +17,7 @@ pipeline {
         stage('Configure dev and prod env using Ansible') {
             steps {
                 
-                sh '''cd ./Ansible/
-                  ansible-playbook playbook.yml
-                  ansible-playbook playbook_git.yml'''
+                sh "./Jenkins/scripts/ansible_playbooks.sh"
             }
         }
         stage("Build") {

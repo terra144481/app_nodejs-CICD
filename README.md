@@ -1,4 +1,4 @@
-**Final project EPAM DevOps Universit** 
+
 
 # CICD React App using Jenkins.
 
